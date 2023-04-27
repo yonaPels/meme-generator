@@ -3,7 +3,6 @@
     margin: 0;
 }
 
-
 .main-header {
     height: 15vh;
     width: 100%;
@@ -12,56 +11,40 @@
 }
 
 .header-gallery {
-    width: 1200px;
-    height: 100px;
+    height: 60px;
+    width: 100%;
     margin: 0;
 }
 
 .images-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 30px 30px;
-    grid-gap: 10px 10px;
-    background-color: #e3e3e3;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 30px 50px;
+    grid-gap: 20px 20px;
+    border: 20px solid #e3e3e3;
+    padding: 20px;
 }
 
 .images-container img {
     width: 100%;
     padding: 10px;
-    /* grid-column-start: 2; */
-    /* grid-column-end: 4; */
-    /* grid-column: 2/ -1; */
-    /* height: 100%; */
-    /* margin: 30px 30px; */
     border: 1px solid black;
     border-radius: 2px;
-    /* transition: width 2s ease-in-out; */
-    /* transition: height 2s ease-in-out; */
-    /* transition: margin 2s ease-in-out; */
+}
+
+.images-container img:hover {
+    cursor: pointer;
+    background-color: #e3e3e3;
+    border: 2px solid black;
+    transition: background-color 0.1s ease-in;
 }
 
 .create-meme {
     background-color: #e3e3e3;
 }
 
-/* .images-gallery img:hover {
-    cursor: pointer;
-    width: 310px;
-    height: 310px;
-    margin: 0;
-    transition: width 2s;
-    transition: height 2s;
-    transition: margin 2s;
-} */
-
 button:hover {
     cursor: pointer;
-}
-
-.main-header .main-menu .box {
-    display: flex;
-    width: 130px;
-    /* height: 130px; */
 }
 
 .main-menu .box {
@@ -74,10 +57,6 @@ button:hover {
 
 }
 
-.main-header .main-menu .box:hover a {
-    color: var(--clr2);
-}
-
 .galery,
 .memes,
 .about {
@@ -88,6 +67,27 @@ button:hover {
     font-size: 30px;
     font-family: montserrat;
 }
+
+.btn {
+    border: none;
+    background-color: white;
+    border-radius: 12px;
+}
+
+footer {
+    height: 10vh;
+    width: 100%;
+    background-color: #ff7f00;
+    /* position: fixed; */
+    bottom: 0;
+}
+
+.search-box {
+    width: 25%;
+    font-size: 16px;
+}
+
+/* helpers */
 
 .grid {
     display: grid;
@@ -113,12 +113,10 @@ button:hover {
     justify-content: space-around;
 }
 
-.btn {
-    border: none;
-    background-color: white;
-    border-radius: 12px;
-    /* width: 60px; */
-    /* height: 60px; */
+.clean-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 /* ///////////////////////// */
@@ -136,8 +134,7 @@ button:hover {
         " . . . . . . . . . "
         " font font font font font . stroke . color "
         " . . . . . . . . . "
-        " emojis emojis emojis emojis emojis emojis emojis emojis emojis "
-    ;
+        " emojis emojis emojis emojis emojis emojis emojis emojis emojis ";
 }
 
 .text-input {
@@ -203,23 +200,22 @@ button:hover {
 
 .keywords-box {
     border: 2px black solid;
-}
-
-li {
-    display: flex;
-    width: 120px;
-}
-
-footer {
-    height: 10vh;
-    width: 100%;
-    background-color: #ff7f00;
-    /* position: fixed; */
-    bottom: 0;
+    width: 50%;
 }
 
 
 
+/* qs */
+
+@media (min-withd: 800px) {
+    .images-container {
+        background-color: green;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+
+/* font-face */
 
 @font-face {
     font-family: lato-bold;
