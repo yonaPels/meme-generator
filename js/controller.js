@@ -12,9 +12,7 @@ function onInit() {
 function renderGallery() {
     const images = getImages()
     let strHTML = images.map(img => `
-        <table>
-            <td><img src="img/${img.id}.jpg" onclick="onImgSelect('${img.id}')"> </td >
-        </table>
+            <img src="img/${img.id}.jpg" onclick="onImgSelect('${img.id}')">
     `).join('')
     const elContainer = document.querySelector(".images-container")
     elContainer.innerHTML = strHTML
@@ -27,7 +25,8 @@ function onImgSelect(id) {
     setImg(id)
     document.querySelector('.images-gallery').classList.add('hide')
     document.querySelector('.editing-bord').classList.remove('hide')
-    document.querySelector('.create-meme').classList.remove('hide')
+    // document.querySelector('.create-meme').classList.remove('hide')
+    document.querySelector('.canvas-container').classList.remove('hide')
     renderMeme()
 }
 

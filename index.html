@@ -14,7 +14,7 @@
     <header class="main-header">
         <!-- <button type="button" onclick="toggleMenu()">☰</button> -->
 
-        <div class="main-header flex space-between align-center ">
+        <div class="main-header flex space-between">
             <div class="logo flex">MEME-GENARATION</div>
             <nav class="main-nav">
                 <ul class="main-menu flex clean-list">
@@ -30,44 +30,36 @@
 
     <section class="images-gallery">
         <header class="flex space-between header-gallery">
-            <!-- <div class="flex search"> -->
             <input type="text" />
-
-            <div class="keywords-box flex"></div>
-            <!-- </div> -->
+            <div class="keywords-box flex clean-list"></div>
         </header>
-        <main class="images-container"></main>
+        <main class="images-container grid"></main>
     </section>
 
-    <section class="create-meme flex space-around hide">
-        <div class="canvas-container">
+    <section class="create-meme flex space-evenly hide">
+        <div class="canvas-container hide">
             <canvas id="my-canvas" height="550" width="550" onclick="canvasClicked(event)">
         </div>
-        <form class="editing-bord hide">
-            <div>
-                <input class="btn text-input" id="text-input" type="text" oninput="onInputText()" />
-                <button class="btn" onclick="onChangeLine()">חיצים למעלה ולמטה</button>
-                <button class="btn" onclick="onAddLine()">פלוס</button>
-                <button class="btn" onclick="onDeletTextLine()">אשפה</button>
-            </div>
-            <div>
-                <button class="btn" onclick="onSetFontSize(+3)">a+</button>
-                <button class="btn" onclick="onSetFontSize(-3)">a-</button>
-                <button class="btn" onclick="onSetAlignment('right')">יישור לשמאל</button>
-                <button class="btn" onclick="onSetAlignment('center')">יישור למרכז</button>
-                <button class="btn" onclick="onSetAlignment('left')">יישור לימין</button>
-            </div>
-            <div>
-                <select class="btn font" name="font" onchange="onSetFont(this.value)">
-                    <option value="impact">IMPACT</option>
-                    <option value="lato">LATO</option>
-                    <option value="euro">EURO</option>
-                </select>
-                <input type="color" class="btn strokeColor" oninput="onSetStrokeColor(this.value)">
-                מסגרת לטקסט
-                <input type="color" class="btn set-color" oninput="onSetColor(this.value)" />
+        <form class="editing-bord grid hide">
+            <input class="text-input btn" id="text-input" type="text" oninput="onInputText()" />
+            <button class="btn replace" onclick="onChangeLine()">חיצים למעלה ולמטה</button>
+            <button class="btn add-line" onclick="onAddLine()">פלוס</button>
+            <button class="btn delet" onclick="onDeletTextLine()">אשפה</button>
+            <button class="btn increase" onclick="onSetFontSize(+3)">a+</button>
+            <button class="btn decrease" onclick="onSetFontSize(-3)">a-</button>
+            <button class="btn left" onclick="onSetAlignment('right')">יישור לשמאל</button>
+            <button class="btn center" onclick="onSetAlignment('center')">יישור למרכז</button>
+            <button class="btn right" onclick="onSetAlignment('left')">יישור לימין</button>
+            <select class="btn font" name="font" onchange="onSetFont(this.value)">
+                <option class="btn" value="impact">Impact</option>
+                <option class="btn" value="lato">Lato</option>
+                <option class="btn" value="euro">Euro</option>
+            </select>
+            <input type="color" class="btn strokeColor" oninput="onSetStrokeColor(this.value)">
+            <input type="color" class="btn set-color" oninput="onSetColor(this.value)" />
+            <div class="btn emojis"> Emojis</div>
 
-                <a href="#" onclick="downloadCanvas(this)" download="">Download</a>
+            <!-- <a href="#" onclick="downloadCanvas(this)" download="">Download</a> -->
 
             </div>
         </form>
