@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Meme Generator</title>
 </head>
 
@@ -15,11 +16,11 @@
         <!-- <button type="button" onclick="toggleMenu()">☰</button> -->
 
         <div class="main-header flex space-between">
-            <div class="logo flex">MEME-GENARATION</div>
+            <h2 class="logo flex space-around">MEME-GENARATOR</h2>
             <nav class="main-nav">
                 <ul class="main-menu flex clean-list">
-                    <li class="box galery"><a href="#">Galery</a></li>
-                    <li class="box about"><a href="#">About</a></li>
+                    <li class="box galery flex space-around"><a href="#">Galery</a></li>
+                    <li class="box about flex space-around"><a href="#">About</a></li>
                 </ul>
             </nav>
             <!-- <button class="btn-menu" onclick="toggleMenu()">☰</button> -->
@@ -37,37 +38,50 @@
     </section>
 
     <section class="create-meme flex space-evenly hide">
-        <div class="canvas-container hide">
-            <canvas id="my-canvas" height="550" width="550" onclick="canvasClicked(event)">
+        <div class="canvas-container grid space-around hide">
+            <canvas class="canvas" id="my-canvas" width="500" height="500" onclick="canvasClicked(event)"></canvas>
+            <button class="btn download"> <a href="#" onclick="downloadCanvas(this)" download="">Download</a></button>
         </div>
-        <form class="editing-bord grid hide">
-            <input class="text-input btn" id="text-input" type="text" oninput="onInputText()" />
-            <button class="btn replace" onclick="onChangeLine()">חיצים למעלה ולמטה</button>
-            <button class="btn add-line" onclick="onAddLine()">פלוס</button>
-            <button class="btn delet" onclick="onDeletTextLine()">אשפה</button>
-            <button class="btn increase" onclick="onSetFontSize(+3)">a+</button>
-            <button class="btn decrease" onclick="onSetFontSize(-3)">a-</button>
-            <button class="btn left" onclick="onSetAlignment('right')">יישור לשמאל</button>
-            <button class="btn center" onclick="onSetAlignment('center')">יישור למרכז</button>
-            <button class="btn right" onclick="onSetAlignment('left')">יישור לימין</button>
-            <select class="btn font" name="font" onchange="onSetFont(this.value)">
-                <option class="btn" value="impact">Impact</option>
-                <option class="btn" value="lato">Lato</option>
-                <option class="btn" value="euro">Euro</option>
-            </select>
-            <input type="color" class="btn strokeColor" oninput="onSetStrokeColor(this.value)">
-            <input type="color" class="btn set-color" oninput="onSetColor(this.value)" />
-            <div class="btn emojis"> Emojis</div>
-
-            <!-- <a href="#" onclick="downloadCanvas(this)" download="">Download</a> -->
+        <div class="bord flex space-around " hidden="true">
+            <div class="editing-bord grid" hidden="true">
+                <input class="text-input btn" id="text-input" type="text" oninput="onInputText()"
+                    placeholder="Enter Your Text...">
+                <button class="btn replace" onclick="onChangeLine()"><img
+                        src="ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt="replace"></button>
+                <button class="btn add-line" onclick="onAddLine()"><img src="ICONS/add.png" alt="add line"></button>
+                <button class="btn delet" onclick="onDeletTextLine()"><img src="ICONS/trash.png"
+                        alt="delete line"></button>
+                <button class="btn increase" onclick="onSetFontSize(+3)"><img src="ICONS/increase font - icon.png"
+                        alt="increase font"></button>
+                <button class="btn decrease" onclick="onSetFontSize(-3)"><img src="ICONS/decrease font - icon.png"
+                        alt="decrease font"></button>
+                <button class="btn align-left" onclick="onSetAlignment('right')"><img src="ICONS/align-to-left.png"
+                        alt="align to left"></button>
+                <button class="btn align-center" onclick="onSetAlignment('center')"><img
+                        src="ICONS/center-text-alignment.png" alt="align center"></button>
+                <button class="btn align-right" onclick="onSetAlignment('left')"><img src="ICONS/align-to-right.png"
+                        alt="align right"></button>
+                <select class="btn font" name="font" onchange="onSetFont(this.value)">
+                    <option class="btn" value="impact">Impact</option>
+                    <option class="btn" value="lato">Lato</option>
+                    <option class="btn" value="euro">Euro</option>
+                </select>
+                <input type="color" class="btn strokeColor" oninput="onSetStrokeColor(this.value)">
+                <button class="btn color-picker" onclick="onPickColor()"><img src="ICONS/paint-board-and-brush.png"
+                        alt=""></button>
+                <!-- <label for="color-input">
+                    <input id="color-input" type="color" class="btn set-color" oninput="onSetColor(this.value)" />
+                    <img src="ICONS/paint-board-and-brush.png" alt="text color">
+                </label> -->
+                <div class="btn emojis"> Emojis</div>
 
             </div>
-        </form>
+        </div>
     </section>
 
-    <footer>
-        <div class="logo flex">MEME-GENARATION</div>
-        <small>all rights reserved 2019</small>
+    <footer class="flex center space-around">
+        <h2 class="logo flex space-around">MEME-GENARATOR</h2>
+        <small class="flex space-around">all rights reserved 2023</small>
     </footer>
 
 

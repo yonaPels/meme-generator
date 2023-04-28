@@ -25,7 +25,7 @@ function onImgSelect(id) {
     setImg(id)
     document.querySelector('.images-gallery').classList.add('hide')
     document.querySelector('.editing-bord').classList.remove('hide')
-    // document.querySelector('.create-meme').classList.remove('hide')
+    document.querySelector('.create-meme').classList.remove('hide')
     document.querySelector('.canvas-container').classList.remove('hide')
     renderMeme()
 }
@@ -76,7 +76,8 @@ function onChangeLine() {
 function onAddLine() {
     event.preventDefault()
     addLine()
-    onChangeLine()
+    gLine = 1
+    // onChangeLine()
     renderMeme()
 }
 
@@ -113,6 +114,9 @@ function onSetStrokeColor(color) {
 function onSetColor(color) {
     setColor(gLine, color)
     renderMeme()
+    const elPicker = document.querySelector(".color-picker")
+    elPicker.innerHTML = `<button class="btn color-picker" onclick="onPickColor()"><img src="ICONS/paint-board-and-brush.png"
+    alt=""></button>`
 }
 
 function downloadCanvas(elLink) {
@@ -160,5 +164,11 @@ function drawRect(x, y) {
     gCtx.fillStyle = "rgba(20,100, 250, 0.2)"
     gCtx.fillRect(x, y - 30, 500, 60)
 }
+
+function onPickColor() {
+    const elPicker = document.querySelector(".color-picker")
+    elPicker.innerHTML = `<input id="color-input" type="color" class="btn set-color" oninput="onSetColor(this.value)" />`
+}
+
 
 function onSearchWord() { console.log(this); }

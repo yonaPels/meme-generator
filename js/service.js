@@ -24,7 +24,7 @@ let gImgs = [
 
 let gMeme = {
     selectedImgId: 5, selectedLineIdx: 0, lines: [
-        { posX: 25, posY: 90, txt: 'I sometimes eat Falafel', size: 20, align: 'left', color: 'red', strokeColor: 'brown', font: 'impact' },
+        { posX: 0, posY: 80, txt: 'I sometimes eat Falafel', size: 20, align: 'left', color: 'red', strokeColor: 'brown', font: 'impact' },
     ]
 }
 
@@ -49,7 +49,7 @@ function setLineTxt(line) {
 }
 
 function addLine() {
-    const line = { posX: 25, posY: 450, txt: 'Somthing else', size: 20, align: 'left', color: 'red', strokeColor: 'brown', font: 'impact' }
+    const line = { posX: 0, posY: 420, txt: 'Somthing else', size: 20, align: 'left', color: 'red', strokeColor: 'brown', font: 'impact' }
     gMeme.lines.push(line)
 }
 
@@ -76,7 +76,6 @@ function setStrokeColor(line, clr) {
 function setColor(line, clr) {
     gMeme.lines[line].color = clr
 }
-
 
 
 function getKeyWords() {
