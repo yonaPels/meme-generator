@@ -19,10 +19,10 @@
 .images-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 30px 50px;
-    grid-gap: 20px 20px;
-    border: 20px solid #e3e3e3;
-    padding: 20px;
+    margin: 3vw 5vw;
+    grid-gap: 2vw 2vw;
+    border: 2vw solid #e3e3e3;
+    padding: 2vw;
 }
 
 img {
@@ -32,7 +32,7 @@ img {
 
 .images-container img {
     width: 100%;
-    padding: 10px;
+    padding: 1vw;
     border: 1px solid black;
     border-radius: 2px;
 }
@@ -78,13 +78,13 @@ img {
 }
 
 a {
-    font-weight: 1500;
+    font-weight: 500;
     color: black;
     text-decoration: none;
 }
 
 .logo {
-    font-size: 35px;
+    font-size: 20px;
     font-family: montserrat;
 }
 
@@ -256,15 +256,13 @@ footer {
 
 /* qs */
 
-@media (min-withd: 800px) {
+@media (min-width: 800px) {
     .images-container {
-        background-color: green;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
     .create-meme {
         flex-direction: row;
-        background-color: blue;
     }
 }
 
