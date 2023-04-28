@@ -57,9 +57,9 @@ img {
     align-items: center;
 }
 
-.main-menu .box:hover {
+/* .main-menu .box:hover {
     border-block-end: 6px solid var(--clr2);
-}
+} */
 
 .set-color {
     width: 60px;
