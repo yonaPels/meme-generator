@@ -4,7 +4,7 @@
 }
 
 .main-header {
-    height: 15vh;
+    height: 12vh;
     width: 100%;
     background-color: #ff7f00;
     /* position: fixed; */
@@ -26,8 +26,7 @@
 }
 
 img {
-    width: 100%;
-
+    width: 70%;
 }
 
 .images-container img {
@@ -57,10 +56,6 @@ img {
     align-items: center;
 }
 
-/* .main-menu .box:hover {
-    border-block-end: 6px solid var(--clr2);
-} */
-
 .set-color {
     width: 60px;
     height: 60px;
@@ -68,10 +63,9 @@ img {
 }
 
 .galery,
-.meme,
 .about {
-    font-size: 30px;
-    width: 150px;
+    font-size: 1.2rem;
+    width: 15vw;
     height: 15vh;
     text-align: center;
     justify-self: center;
@@ -84,7 +78,7 @@ a {
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 1.2rem;
     font-family: montserrat;
 }
 
@@ -95,7 +89,7 @@ a {
 }
 
 footer {
-    height: 10vh;
+    height: 12vh;
     width: 100%;
     background-color: #ff7f00;
     /* position: fixed; */
@@ -104,7 +98,7 @@ footer {
 
 .search-box {
     width: 25%;
-    font-size: 16px;
+    font-size: 0.8rem;
 }
 
 .create-meme {
@@ -119,6 +113,10 @@ footer {
 
 .flex {
     display: flex;
+}
+
+.block {
+    display: block;
 }
 
 .hide {
@@ -162,7 +160,7 @@ footer {
 /* ///////////////////////// */
 
 .editing-bord {
-    grid-template-columns: 60px minmax(8px 2vw) 60px minmax(8px 2vw) 60px minmax(8px 2vw) 60px minmax(8px 2vw) 60px;
+    grid-template-columns: 60px 1.5vw 60px 1.5vw 60px 1.5vw 60px 1.5vw 60px;
     grid-template-rows: 60px 10px 60px 43px 60px 10px 60px 30px 135px;
     grid-template-areas:
         " text text text text text text text text text "
@@ -178,7 +176,7 @@ footer {
 
 .text-input {
     grid-area: text;
-    font-size: 15px;
+    font-size: 18px;
     /* width: 373px; */
 }
 
@@ -217,7 +215,7 @@ footer {
 
 .font {
     grid-area: font;
-    width: 220px;
+    width: 180px+4vw;
     font-size: 20px;
 }
 
@@ -253,6 +251,10 @@ footer {
 /* qs */
 
 @media (min-width: 800px) {
+    :root {
+        font-size: 30px;
+    }
+
     .images-container {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
