@@ -7,6 +7,7 @@ let gLine = 0
 
 function onInit() {
     renderGallery()
+    renderKeywords()
 }
 
 function renderGallery() {
@@ -18,8 +19,11 @@ function renderGallery() {
     elContainer.innerHTML = strHTML
 }
 
-onInit()
-
+function renderCanvas() {
+    const elCanvasContainer = document.querySelector('.canvas-container')
+    console.log(elCanvasContainer.offsetHeight);
+    elCanvasContainer.innerHTML = `<canvas class="canvas" id="my-canvas" width="${elCanvasContainer.offsetWidth}" height="${elCanvasContainer.offsetHeight}" onclick="canvasClicked(event)"></canvas>`
+}
 
 function onImgSelect(id) {
     setImg(id)
@@ -27,6 +31,7 @@ function onImgSelect(id) {
     document.querySelector('.editing-bord').classList.remove('hide')
     document.querySelector('.create-meme').classList.remove('hide')
     document.querySelector('.canvas-container').classList.remove('hide')
+    renderCanvas()
     renderMeme()
 }
 
@@ -45,7 +50,6 @@ function renderMeme() {
     }
 }
 
-renderKeywords()
 function renderKeywords() {
     const keywords = getKeywordSearchCountMap()
     // console.log(Object.keys(keywords[0]));

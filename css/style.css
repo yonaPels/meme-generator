@@ -105,6 +105,13 @@ footer {
     flex-direction: column;
 }
 
+.canvas-container {
+    width: 80vw;
+    height: 80vw;
+    margin-block: 5vw;
+    align-self: center;
+}
+
 /* helpers */
 
 .grid {
@@ -142,26 +149,23 @@ footer {
 }
 
 .editing-bord {
-    width: 500px;
+    width: 90vw;
+    height: 90vw;
     justify-content: space-around;
-    padding: 0.5vw;
-    margin: 4vw;
-    border: 1px black solid;
-    border-radius: 1vw;
+    border: 0.3vw black solid;
+    border-radius: 12px;
 }
 
 .canvas {
-    margin: 4vw;
-    /* margin-bottom: 0; */
     border-radius: 12px;
-    border: 1vw black solid;
+    border: 0.3vw black solid;
 }
 
 /* ///////////////////////// */
 
 .editing-bord {
-    grid-template-columns: 60px 1.5vw 60px 1.5vw 60px 1.5vw 60px 1.5vw 60px;
-    grid-template-rows: 60px 10px 60px 43px 60px 10px 60px 30px 135px;
+    grid-template-columns: 50px 0vw 50px 0vw 50px 0vw 50px 0.5vw 50px;
+    grid-template-rows: 50px 12px 50px 20px 50px 12px 50px 20px 60px;
     grid-template-areas:
         " text text text text text text text text text "
         " . . . . . . . . . "
@@ -221,14 +225,14 @@ footer {
 
 .strokeColor {
     grid-area: stroke;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
 }
 
 .color-picker {
     grid-area: color;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
 }
 
 .emojis {
@@ -261,6 +265,50 @@ footer {
 
     .create-meme {
         flex-direction: row;
+        height: 76vh;
+    }
+
+    .canvas-container {
+        width: 65vh;
+        height: 65vh;
+        margin-block: 5vh;
+    }
+
+    .editing-bord {
+        padding: 1vw;
+        margin-block: 5vh;
+        width: 65vh;
+        height: 65vh;
+        justify-content: space-around;
+        border: 0.3vw black solid;
+        border-radius: 12px;
+    }
+
+    .editing-bord {
+        grid-template-columns: 60px 1.5vw 60px 1.5vw 60px 1.5vw 60px 1.5vw 60px;
+        grid-template-rows: 60px 12px 60px 43px 60px 12px 60px 30px 135px;
+        grid-template-areas:
+            " text text text text text text text text text "
+            " . . . . . . . . . "
+            " . . replace . add . delet . . "
+            " . . . . . . . . . "
+            " increase . decrease . left . center . right "
+            " . . . . . . . . . "
+            " font font font font font . stroke . color "
+            " . . . . . . . . . "
+            " emojis emojis emojis emojis emojis emojis emojis emojis emojis ";
+    }
+
+    .color-picker {
+        grid-area: color;
+        height: 60px;
+        width: 60px;
+    }
+
+    .strokeColor {
+        grid-area: stroke;
+        height: 60px;
+        width: 60px;
     }
 }
 

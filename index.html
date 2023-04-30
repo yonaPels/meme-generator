@@ -11,7 +11,7 @@
 </head>
 
 
-<body class="main-layout">
+<body class="main-layout" onload="onInit()">
     <header class="main-header">
         <!-- <button type="button" onclick="toggleMenu()">☰</button> -->
 
@@ -39,7 +39,7 @@
 
     <section class="create-meme flex space-evenly hide">
         <div class="canvas-container grid space-around hide">
-            <canvas class="canvas" id="my-canvas" width="350" height="350" onclick="canvasClicked(event)"></canvas>
+            <!-- <canvas class="canvas" id="my-canvas" width="350" height="350" onclick="canvasClicked(event)"></canvas> -->
             <button class="btn download"> <a href="#" onclick="downloadCanvas(this)" download="">Download</a></button>
         </div>
         <div class="bord flex space-around " hidden="true">
