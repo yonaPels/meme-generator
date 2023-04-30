@@ -1,6 +1,6 @@
 'use strict'
 
-let gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
+let gKeywordSearchCountMap = { 'funny': 19, 'comics': 40, 'dogs': 24, 'drinks': 30, 'books': 48, }
 let gImgs = [
     { id: 1, url: 'img/1.jpg', keywords: ['funny', 'cat'] },
     { id: 2, url: 'img/2.jpg', keywords: [] },

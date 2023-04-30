@@ -10,13 +10,12 @@
     <title>Meme Generator</title>
 </head>
 
-
 <body class="main-layout" onload="onInit()">
     <header class="main-header">
         <!-- <button type="button" onclick="toggleMenu()">☰</button> -->
 
         <div class="main-header flex space-between">
-            <h2 class="logo flex space-around">MEME-GENARATOR</h2>
+            <div class="logo flex space-around" onclick="onDisplayGalery()"><img src="LOGO/LOGO.png" alt=""></div>
             <nav class="main-nav">
                 <ul class="main-menu flex clean-list">
                     <li class="box galery flex space-around"><a href="#">Galery</a></li>
@@ -31,8 +30,8 @@
 
     <section class="images-gallery">
         <header class="flex space-between header-gallery">
-            <input type="text" class="search-box" placeholder="Search Here..." />
-            <div class="keywords-box flex clean-list"></div>
+            <input type="search" class="search-box" placeholder="Enter search keyword" />
+            <div class="keywords-box flex  space-between clean-list"></div>
         </header>
         <main class="images-container grid"></main>
     </section>
@@ -73,14 +72,23 @@
                     <input id="color-input" type="color" class="btn set-color" oninput="onSetColor(this.value)" />
                     <img src="ICONS/paint-board-and-brush.png" alt="text color">
                 </label> -->
-                <div class="btn emojis"> Emojis</div>
+                <div class="btn emojis">
+                    <ul class="clean-list flex space-evenly emojis-list">
+                        <li onclick="onAddIcon(this.value)">😊</li>
+                        <li onclick="onAddIcon(this.value)">😘</li>
+                        <li onclick="onAddIcon(this.value)">😡</li>
+                        <li onclick="onAddIcon(this.value)">😒</li>
+                        <li onclick="onAddIcon(this.value)">😂</li>
+                        <li onclick="onAddIcon(this.value)">🤯</li>
+                    </ul>
+                </div>
 
             </div>
         </div>
     </section>
 
     <footer>
-        <h2 class="logo flex space-around">MEME-GENARATOR</h2>
+        <div class="logo flex space-around" onclick="onDisplayGalery()"><img src="LOGO/LOGO.png" alt=""></div>
         <small class="flex space-around">all rights reserved 2023</small>
     </footer>
 

@@ -56,7 +56,7 @@ function renderKeywords() {
     const keys = Object.keys(keywords)
 
     const strHTML = keys.map(key => `
-        <li style="font-size:${keywords[key] * 3}px" onclick="onSearchWord()">${key}</li>
+        <li style="font-size:${keywords[key]}px" onclick="onSearchWord()">${key}</li>
     `).join('')
     // console.log(strHTML);
     const elKeywordsBox = document.querySelector(".keywords-box")
@@ -174,5 +174,15 @@ function onPickColor() {
     elPicker.innerHTML = `<input id="color-input" type="color" class="btn set-color" oninput="onSetColor(this.value)" />`
 }
 
+function onAddIcon(emoji) {
+    console.log(emoji);
+}
+
+function onDisplayGalery() {
+    document.querySelector('.images-gallery').classList.remove('hide')
+    document.querySelector('.editing-bord').classList.add('hide')
+    document.querySelector('.create-meme').classList.add('hide')
+    document.querySelector('.canvas-container').classList.add('hide')
+}
 
 function onSearchWord() { console.log(this); }

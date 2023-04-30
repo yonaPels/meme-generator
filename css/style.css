@@ -20,9 +20,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 3vw 5vw;
-    grid-gap: 2vw 2vw;
+    grid-gap: 1vw 1vw;
     border: 2vw solid #e3e3e3;
-    padding: 2vw;
+    padding: 1vw;
 }
 
 img {
@@ -31,7 +31,7 @@ img {
 
 .images-container img {
     width: 100%;
-    padding: 1vw;
+    padding: 0.5vw;
     border: 1px solid black;
     border-radius: 2px;
 }
@@ -77,9 +77,21 @@ a {
     text-decoration: none;
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 .logo {
+    margin-left: 2vw;
+    margin-block: 12px;
+    /* padding-block: 20px; */
     font-size: 1.2rem;
     font-family: montserrat;
+}
+
+footer .logo {
+    margin-block: 0;
+    margin-left: 0;
 }
 
 .btn {
@@ -92,13 +104,29 @@ footer {
     height: 12vh;
     width: 100%;
     background-color: #ff7f00;
-    /* position: fixed; */
     bottom: 0;
 }
 
+footer img {
+    width: 20%;
+}
+
+/* .search-box img {
+    width: 10%;
+} */
+
 .search-box {
-    width: 25%;
+    background-image: url("/ICONS/search-icon.png");
+    background-size: 8%;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    margin-top: 1vw;
+    margin-left: 5vw;
+    width: 20%;
     font-size: 0.8rem;
+    border: none;
+    border-bottom: 2px solid black;
 }
 
 .create-meme {
@@ -111,6 +139,7 @@ footer {
     margin-block: 5vw;
     align-self: center;
 }
+
 
 /* helpers */
 
@@ -132,6 +161,10 @@ footer {
 
 .space-evenly {
     justify-content: space-evenly;
+}
+
+.center {
+    align-items: center;
 }
 
 .space-between {
@@ -164,8 +197,8 @@ footer {
 /* ///////////////////////// */
 
 .editing-bord {
-    grid-template-columns: 50px 0vw 50px 0vw 50px 0vw 50px 0.5vw 50px;
-    grid-template-rows: 50px 12px 50px 20px 50px 12px 50px 20px 60px;
+    grid-template-columns: 40px 0vw 40px 0vw 40px 0vw 40px 0.5vw 40px;
+    grid-template-rows: 40px 12px 40px 20px 40px 12px 40px 20px 40px;
     grid-template-areas:
         " text text text text text text text text text "
         " . . . . . . . . . "
@@ -219,7 +252,7 @@ footer {
 
 .font {
     grid-area: font;
-    width: 180px+4vw;
+    /* width: 180px+4vw; */
     font-size: 20px;
 }
 
@@ -246,11 +279,18 @@ footer {
 }
 
 .keywords-box {
-    border: 2px black solid;
+    /* border: 2px black solid; */
     width: 50%;
+    margin: 2vw 5vw;
+
+
 }
 
-
+.emojis-list {
+    font-size: 40px;
+    height: 100%;
+    align-items: center;
+}
 
 /* qs */
 
@@ -275,7 +315,7 @@ footer {
     }
 
     .editing-bord {
-        padding: 1vw;
+        padding: 2vw;
         margin-block: 5vh;
         width: 65vh;
         height: 65vh;
@@ -285,8 +325,8 @@ footer {
     }
 
     .editing-bord {
-        grid-template-columns: 60px 1.5vw 60px 1.5vw 60px 1.5vw 60px 1.5vw 60px;
-        grid-template-rows: 60px 12px 60px 43px 60px 12px 60px 30px 135px;
+        grid-template-columns: 60px 1vw 60px 1vw 60px 1vw 60px 1vw 60px;
+        grid-template-rows: 60px 20px 60px 50px 60px 20px 60px 50px 100px;
         grid-template-areas:
             " text text text text text text text text text "
             " . . . . . . . . . "
