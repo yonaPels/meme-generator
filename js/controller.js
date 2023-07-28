@@ -52,13 +52,11 @@ function renderMeme() {
 
 function renderKeywords() {
     const keywords = getKeywordSearchCountMap()
-    // console.log(Object.keys(keywords[0]));
     const keys = Object.keys(keywords)
 
     const strHTML = keys.map(key => `
         <li style="font-size:${keywords[key]}px" onclick="onSearchWord()">${key}</li>
     `).join('')
-    // console.log(strHTML);
     const elKeywordsBox = document.querySelector(".keywords-box")
     elKeywordsBox.innerHTML = strHTML
 
