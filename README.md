@@ -1,2 +1,2 @@
-# meme-jenerator
+# meme-generator
 sprint 2
