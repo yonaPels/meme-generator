@@ -1,2 +1,2 @@
-# meme
-meme-proj
+# meme-jeneration
+sprint 2
